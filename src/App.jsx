@@ -9,10 +9,7 @@ export default function App() {
 
   function handleStartClick() {
     setStarted(prevStarted => !prevStarted)
-    console.log(started)
   }
-
-
 
   return (
     <main>

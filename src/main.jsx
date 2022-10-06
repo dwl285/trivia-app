@@ -7,8 +7,8 @@ import blobBottom from './assets/blob-bottom.png'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <img src={blobTop} className="blob-top"/>
-    <img src={blobBottom} className="blob-bottom"/>
+    <img src={blobTop} className="blob-top" />
+    <img src={blobBottom} className="blob-bottom" />
     <App />
   </React.StrictMode>
 )

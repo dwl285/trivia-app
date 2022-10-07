@@ -9,7 +9,13 @@ export default function Question(props) {
         <div className="question-container">
             <p className="question">{question}</p>
             <div className="answers">
-                {answers.map(answer => <button className="answer">{answer.answer}</button>)}
+                {answers.map((answer, index) =>
+                    <button
+                        key={index}
+                        className="answer"
+                        onClick={() => props.handleAnswerClick(question, answer)}>
+                        {answer.answer}
+                    </button>)}
             </div>
             <div className="divider"></div>
         </div>

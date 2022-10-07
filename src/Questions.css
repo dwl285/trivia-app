@@ -11,8 +11,15 @@
     justify-content: center;
 }
 
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 20px;
+}
 
-.check-answers {
+.check-answers,
+.play-again {
     width: 193px;
     height: 52px;
     background: #4D5B9E;
@@ -25,4 +32,15 @@
     line-height: 19px;
     text-align: center;
     color: #F5F7FB;
+    align-self: center;
+}
+
+.score {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 15px;
+    text-align: center;
+    color: #293264;
 }

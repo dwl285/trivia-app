@@ -34,8 +34,23 @@
     margin-bottom: 15px;
 }
 
+.answer--selected {
+    border-radius: 8px;
+    padding: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 12px;
+    text-align: center;
+    color: #293264;
+    border: none;
+    background: #D6DBF5;
+    margin-bottom: 15px;
+}
+
 .divider {
-    width: 400px;
+    width: auto;
     height: 1px;
     background: #DBDEF0;
     margin-bottom: 30px;

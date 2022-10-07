@@ -9,10 +9,10 @@ export default function Question(props) {
         <div className="question-container">
             <p className="question">{question}</p>
             <div className="answers">
-                {answers.map((answer, index) =>
+                {answers.map(answer =>
                     <button
-                        key={index}
-                        className="answer"
+                        key={answer.id}
+                        className={`answer${answer.selected ? "--selected" : ""}`}
                         onClick={() => props.handleAnswerClick(question, answer)}>
                         {answer.answer}
                     </button>)}

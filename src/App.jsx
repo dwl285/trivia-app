@@ -66,6 +66,10 @@ export default function App() {
   }
 
   function handleAnswerClick(question, answer) {
+
+    if (gameState === "post") {
+      return
+    }
     const questionObject = questionsData.find(q => q.question === question)
     const newAnswersList = questionObject.answers.map(a => a.answer === answer.answer ? { ...a, selected: true } : { ...a, selected: false })
 
@@ -83,6 +87,9 @@ export default function App() {
 
   function handlePlayAgainClick() {
     setgameState("pre")
+    fetch("https://opentdb.com/api.php?amount=5&type=multiple")
+      .then(res => res.json())
+      .then(data => setQuestionsData(data.results.map(question => createQuestionData(question))))
   }
 
   return (

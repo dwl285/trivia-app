@@ -13,13 +13,15 @@ export default function Questions(props) {
             Check Answers
         </button>
     } else if (props.gameState === "post") {
-        footer = [<h3 className="score">You scored {props.score}/{5} correct answers</h3>,
-        <button
-            className="play-again"
-            onClick={props.handlePlayAgainClick}
-        >
-            Play Again
-        </button>]
+        footer = <>
+            <h3 className="score">You scored {props.score}/{5} correct answers</h3>
+            <button
+                className="play-again"
+                onClick={props.handlePlayAgainClick}
+            >
+                Play Again
+            </button>
+        </>
     }
 
 
@@ -44,7 +46,8 @@ export default function Questions(props) {
                         <Question
                             key={question.id}
                             question={question}
-                            handleAnswerClick={props.handleAnswerClick} />)
+                            handleAnswerClick={props.handleAnswerClick}
+                            gameState={props.gameState} />)
             }
             <div className="footer">{footer}</div>
 
